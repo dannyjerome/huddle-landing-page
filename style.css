@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  background-image: url(/fronend-mentor-projects/huddle-landing-page-with-single-introductory-section-master/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: var(--Violet);
+  background-size: cover;
+  color: var(--white);
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
+}
+
+.container {
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4.5rem;
+}
+.container .logo {
+  margin-top: 1rem;
+  align-items: start;
+  justify-content: center;
+  padding: 1rem;
+  width: 50%;
+}
+.container .hero {
+  display: grid;
+  /* grid-template-rows: 1fr 1fr; */
+  gap: 5rem;
+}
+.mockup {
+  width: 100%;
+}
+.hero__contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.8rem;
+}
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+}
+.description {
+  font-size: 1.0625rem;
+}
+
+.btn {
+  background-color: var(--white);
+  border: solid transparent;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5rem;
+  color: var(--Violet);
+  padding: 0.5rem 5rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 350ms ease;
+}
+
+.btn:hover {
+  background-color: var(--SoftMagenta);
+}
+.social-media {
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  fill: var(--white);
+}
+.social-media svg {
+  cursor: pointer;
+  width: 2.3rem;
+  height: 2.3rem;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  transition: all ease 350ms;
+}
+.social-media svg:hover {
+  border-color: var(--SoftMagenta);
+  fill: var(--SoftMagenta);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 775px) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+  }
+  .container .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  .hero__contents {
+    align-items: start;
+    text-align: start;
+    gap: 1.8rem;
+  }
+  .title {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.3rem;
+    width: 23ch;
+  }
+  .description {
+    font-size: 1.125rem;
+  }
+  .social-media {
+    justify-content: flex-end;
+  }
+}
